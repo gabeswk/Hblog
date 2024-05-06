@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-
+    background-color: hsl(0, 1%, 84%);
 }
 
 .rodacima {
@@ -19,27 +19,41 @@ body {
     color: white;
     text-align: center;
 }
-.rodabaixo{
-    background-color: rgb(223, 223, 223);
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-   width: auto;
+.menu {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 1000;
+    display: none; /* Inicialmente oculto */
 }
 
-.rodabaixo a{
-    background-color: white;
-    text-align: center;
-    height: auto;
+.menu a {
+    display: block;
+    padding: 10px;
     text-decoration: none;
-    font-size: medium;
-    box-shadow: 2px 1px #888888;
-    padding: 10px 10px 10px 10px;
+    color: #333;
 }
-a:hover{
-    background-color: rgb(215, 214, 214);
-    scale:1.05;
 
+.menu-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
 }
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+  
+
 .container {
     display: flex;
 }
@@ -75,18 +89,4 @@ a:hover{
 .top10 {
     font-weight: 1;
     margin-left: 10%;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: hsl(0, 0%, 100%);
-    opacity: 0; /* Define a opacidade inicial como 0 */
-    transition: opacity 1s ease; /* Adiciona uma transição de opacidade */
-}
-
-/* Quando a página carregar completamente, a opacidade será definida como 1, tornando-a visível */
-body.loaded {
-    opacity: 1;
 }
